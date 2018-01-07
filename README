@@ -1,0 +1,28 @@
+This is a basic program that will take a MileIQ Report and compare it to your gGoogle Location History, outputting a file with the days that are missing from MileIQ's logs.
+Not every day will be useful; it may be a day that you stayed home, but even a few days missing in the year add up. I found ~$800 in missing drives, from about 30 days.
+
+You will need to get the report from mile IQ.
+This is the report available from https://dashboard.mileiq.com/reports
+Be sure to select the csv option, and generate a report for whatever year you are looking for.
+
+To get your google location history, head here: https://takeout.google.com/settings/takeout
+Hit the "Selet None" option, then find "Location History". If it does not say JSON next to it, click it and change KML to JSON.
+Then Hit next, choose how you want the data delivered. ( I usually link my Dropbox, or Google Drive its a little faster than the email option.)
+
+Once you have both files, place them in the same folder as this script, and make sure the file names match the ones in the settings area of the script.
+Set the year you are trying to compare in the settings. To keep the memory usage lower, it discards any data from a year you are not analyzing.
+If you are using an IDE, make sure to run the script WITHOUT debugging, you may run into memory errors, My JSON file was over 800Mb, so it would throw memory errors if debugging was on.
+
+When you have the list of days, you can go to google.com/location history and check the days that are in the spreadsheet or in the terminal. SEE LIMITATIONS.
+
+Limitations:
+Unfortunately as of writing, Mile IQ does not have a bulk upload option, so I have not tried to implement any parsing of the missing days to a file to upload back to them.
+This program ONLY checks for missing days. Once it finds even one drive on a day in MileIQ it assumes the app worked the entire day. If this program reports that 2017-2-3 was missing,
+you should also check 2017-2-2 to see if the app stopped working part way through the day.
+
+
+Requirements:
+Python 3
+arrow
+ijson
+(pip install aarow, ijson)

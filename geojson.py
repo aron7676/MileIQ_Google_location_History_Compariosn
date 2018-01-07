@@ -8,9 +8,10 @@
 Year = "2017"
 #This is the year you are wanting to compare Google's Location History to Mile IQ for.
 Google_Location_History_Filename = "LocationHistory.json"
-MileIQ_Filename = '2017/MileIQ_2017.csv'
+#To get your google location history JSON, head here: https://takeout.google.com/settings/takeout
+MileIQ_Filename = 'MileIQ_2017.csv'
 #This is the report available from https://dashboard.mileiq.com/reports
-#Be sure to select the
+#Be sure to select the csv option, and generate a report for whatever year you are looking for.
 #
 Output_Filename = str(Year)+ "MissingDays.csv"
 
