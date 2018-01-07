@@ -1,4 +1,4 @@
-This is a basic program that will take a MileIQ Report and compare it to your gGoogle Location History, outputting a file with the days that are missing from MileIQ's logs.
+This is a basic program that will take a MileIQ Report and compare it to your Google Location History, outputting a file with the days that are missing from MileIQ's logs.
 Not every day will be useful; it may be a day that you stayed home, but even a few days missing in the year add up. I found ~$800 in missing drives, from about 30 days.
 
 You will need to get the report from mile IQ.
@@ -13,7 +13,7 @@ Once you have both files, place them in the same folder as this script, and make
 Set the year you are trying to compare in the settings. To keep the memory usage lower, it discards any data from a year you are not analyzing.
 If you are using an IDE, make sure to run the script WITHOUT debugging, you may run into memory errors, My JSON file was over 800Mb, so it would throw memory errors if debugging was on.
 
-When you have the list of days, you can go to google.com/location history and check the days that are in the spreadsheet or in the terminal. SEE LIMITATIONS.
+When you have the list of days, you can go to https://google.com/locationhistory and check the days that are in the spreadsheet or in the terminal. SEE LIMITATIONS.
 
 Limitations:
 Unfortunately as of writing, Mile IQ does not have a bulk upload option, so I have not tried to implement any parsing of the missing days to a file to upload back to them.
